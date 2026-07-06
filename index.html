@@ -123,7 +123,7 @@
   .section-head .bar { width: 42px; height: 4px; border-radius: 2px; background: var(--accent); }
   .section-head p {
     margin: 0; max-width: 600px; font-family: var(--font-mono); font-size: var(--text-body);
-    line-height: var(--leading-body); letter-spacing: var(--tracking-body);
+    line-height: var(--leading-body); letter-spacing: var(--tracking-body); word-break: keep-all;
   }
   .on-dark h2 { color: var(--text-on-dark); }
   .on-light h2 { color: var(--text-on-light); }
@@ -167,7 +167,7 @@
   /* 히어로 텍스트 — 화면 폭에 따라 부드럽게 자동 축소 */
   .hero-eyebrow { font-size: clamp(11px, 3.2vw, 15px) !important; line-height: 1.5; }
   .hero-title { font-size: clamp(28px, 7.6vw, 58px) !important; }
-  .hero-desc { font-size: clamp(12px, 3.4vw, 14px) !important; line-height: 1.65 !important; }
+  .hero-desc { font-size: clamp(12px, 3.4vw, 14px) !important; line-height: 1.65 !important; word-break: keep-all; }
 
   /* ---- reveal ---- */
   [data-reveal] {
@@ -334,7 +334,7 @@
         <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
           <span class="hero-eyebrow" style="font-family:var(--font-mono); font-size:15px; font-weight:var(--weight-semibold); letter-spacing:0.08em; color:var(--accent-on-dark);">PORTFOLIO OF JAEBONG CHOI<br>CONSULTING × CONTENT</span>
           <h1 class="hero-title" style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:58px; line-height:1.16; color:var(--text-on-dark);">유학 컨설팅의 경력<br>콘텐츠로 완성합니다</h1>
-          <p class="hero-desc" style="margin:0; max-width:620px; font-family:var(--font-mono); font-size:var(--text-body); line-height:var(--leading-body); letter-spacing:var(--tracking-body); color:var(--text-muted-on-dark);">저는 유학업을 사랑하고 그래서 잘 할 수 있는 모든 것을 익히는 중 입니다.<br>지금은 유학 컨설팅으로 경험한 모든 부분을 시각화 하려 노력 합니다.</p>
+          <p class="hero-desc" style="margin:0; max-width:620px; font-family:var(--font-mono); font-size:var(--text-body); line-height:var(--leading-body); letter-spacing:var(--tracking-body); color:var(--text-muted-on-dark);">유학업을 사랑해, 더 잘하기 위해 계속 배웁니다.<br>상담에서 쌓은 경험을 콘텐츠로 시각화합니다.</p>
         </div>
         <a class="btn hero lg" href="#consult">포트폴리오 보기 <span class="chev">→</span></a>
       </div>
