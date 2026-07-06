@@ -8,6 +8,15 @@
 <meta property="og:title" content="최재봉 · 유학 컨설팅 × AI 콘텐츠 포트폴리오">
 <meta property="og:description" content="유학 컨설팅의 경력, 콘텐츠로 완성합니다.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://cjbong-portfolio.vercel.app/">
+<meta property="og:image" content="https://cjbong-portfolio.vercel.app/assets/portrait.png">
+<meta property="og:image:width" content="1122">
+<meta property="og:image:height" content="1402">
+<meta property="og:image:alt" content="최재봉 프로필 사진">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="최재봉 · 유학 컨설팅 × AI 콘텐츠 포트폴리오">
+<meta name="twitter:description" content="유학 컨설팅의 경력, 콘텐츠로 완성합니다.">
+<meta name="twitter:image" content="https://cjbong-portfolio.vercel.app/assets/portrait.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap">
@@ -155,6 +164,11 @@
   .nav a:hover { color: #fff; }
   .nav a.active { color: var(--accent-on-dark); font-weight: var(--weight-semibold); }
 
+  /* 히어로 텍스트 — 화면 폭에 따라 부드럽게 자동 축소 */
+  .hero-eyebrow { font-size: clamp(11px, 3.2vw, 15px) !important; line-height: 1.5; }
+  .hero-title { font-size: clamp(28px, 7.6vw, 58px) !important; }
+  .hero-desc { font-size: clamp(12px, 3.4vw, 14px) !important; line-height: 1.65 !important; }
+
   /* ---- reveal ---- */
   [data-reveal] {
     opacity: 0; transform: translateY(34px);
@@ -259,8 +273,6 @@
     .strength-grid { grid-template-columns: 1fr; gap: 28px; }
     .overseas-grid { grid-template-columns: 1fr; }
     .hero-inner { padding: 40px 24px 56px !important; }
-    .hero-inner h1 { font-size: 34px !important; }
-    .hero-inner span[style*="font-size:15px"] { font-size: 13px !important; }
 
     /* 2단 → 1단 세로 스택 (경력/해외 경험, 핵심 역량) */
     .split { flex-direction: column; gap: 20px; align-items: stretch; }
@@ -279,8 +291,6 @@
     .skills-row { gap: 6px; }
     .skill-tile { width: 40px; height: 40px; }
     .skill-tile span[style*="font-size:18px"] { font-size: 16px; }
-
-    .hero-inner h1 { font-size: 30px !important; }
 
     /* 타임라인 행: 기간 위 / 소속 아래로 자연스럽게 정렬 */
     .row { gap: 12px; }
@@ -322,9 +332,9 @@
 
       <div class="hero-inner" style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:64px 100px 96px; gap:34px;">
         <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <span style="font-family:var(--font-mono); font-size:15px; font-weight:var(--weight-semibold); letter-spacing:0.08em; color:var(--accent-on-dark);">PORTFOLIO OF JAEBONG CHOI<br>CONSULTING × CONTENT</span>
-          <h1 style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:58px; line-height:1.16; color:var(--text-on-dark);">유학 컨설팅의 경력<br>콘텐츠로 완성합니다</h1>
-          <p style="margin:0; max-width:620px; font-family:var(--font-mono); font-size:var(--text-body); line-height:var(--leading-body); letter-spacing:var(--tracking-body); color:var(--text-muted-on-dark);">저는 유학업을 사랑하고 그래서 잘 할 수 있는 모든 것을 익히는 중 입니다.<br>지금은 유학 컨설팅으로 경험한 모든 부분을 시각화 하려 노력 합니다.</p>
+          <span class="hero-eyebrow" style="font-family:var(--font-mono); font-size:15px; font-weight:var(--weight-semibold); letter-spacing:0.08em; color:var(--accent-on-dark);">PORTFOLIO OF JAEBONG CHOI<br>CONSULTING × CONTENT</span>
+          <h1 class="hero-title" style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:58px; line-height:1.16; color:var(--text-on-dark);">유학 컨설팅의 경력<br>콘텐츠로 완성합니다</h1>
+          <p class="hero-desc" style="margin:0; max-width:620px; font-family:var(--font-mono); font-size:var(--text-body); line-height:var(--leading-body); letter-spacing:var(--tracking-body); color:var(--text-muted-on-dark);">저는 유학업을 사랑하고 그래서 잘 할 수 있는 모든 것을 익히는 중 입니다.<br>지금은 유학 컨설팅으로 경험한 모든 부분을 시각화 하려 노력 합니다.</p>
         </div>
         <a class="btn hero lg" href="#consult">포트폴리오 보기 <span class="chev">→</span></a>
       </div>
