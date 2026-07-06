@@ -1,0 +1,7 @@
+# local dev / deploy tooling
+.vercel/
+serve-static.ps1
+
+# OS cruft
+.DS_Store
+Thumbs.db
