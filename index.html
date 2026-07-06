@@ -210,7 +210,7 @@
 
   /* ---- carousel ---- */
   .carousel-row { display: flex; align-items: center; gap: 20px; }
-  .carousel { display: flex; gap: 24px; overflow-x: auto; scroll-behavior: smooth; padding: 4px; scrollbar-width: thin; }
+  .carousel { display: flex; flex: 1 1 auto; min-width: 0; gap: 24px; overflow-x: auto; scroll-behavior: smooth; padding: 4px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
   .carousel::-webkit-scrollbar { height: 8px; }
   .carousel::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 4px; }
   .card { display: flex; flex-direction: column; gap: 14px; width: 280px; flex-shrink: 0; }
@@ -260,15 +260,37 @@
     .overseas-grid { grid-template-columns: 1fr; }
     .hero-inner { padding: 40px 24px 56px !important; }
     .hero-inner h1 { font-size: 34px !important; }
-    .split { gap: 32px; }
-    .split .body { min-width: 0; }
+    .hero-inner span[style*="font-size:15px"] { font-size: 13px !important; }
+
+    /* 2단 → 1단 세로 스택 (경력/해외 경험, 핵심 역량) */
+    .split { flex-direction: column; gap: 20px; align-items: stretch; }
+    .split .lead { min-width: 0; }
+    .split .body { min-width: 0; max-width: none; width: 100%; }
+
+    /* About 두 열 간격 축소 */
+    .about-cols { gap: 40px !important; }
+
+    /* 카드뉴스 좌우 여백 축소 (데스크톱 85px 인라인 무력화) */
+    #cardnews { padding-left: 20px !important; padding-right: 20px !important; }
   }
   @media (max-width: 560px) {
-    .nav { gap: 16px 18px; margin: 16px 16px 0; }
+    .nav { gap: 14px 16px; margin: 16px 16px 0; padding: 12px 18px; }
     .nav a { font-size: 13px; }
     .skills-row { gap: 6px; }
     .skill-tile { width: 40px; height: 40px; }
     .skill-tile span[style*="font-size:18px"] { font-size: 16px; }
+
+    .hero-inner h1 { font-size: 30px !important; }
+
+    /* 타임라인 행: 기간 위 / 소속 아래로 자연스럽게 정렬 */
+    .row { gap: 12px; }
+    .row .rt { max-width: 62%; }
+
+    /* 카드뉴스: 모바일은 스와이프, 화살표 숨김 + 카드 화면폭에 맞춤 */
+    .carousel-row .iconbtn { display: none; }
+    .carousel-row { gap: 0; }
+    .card, .card .thumb { width: min(74vw, 280px); }
+    .card .thumb { height: auto; aspect-ratio: 280 / 350; }
   }
 </style>
 </head>
@@ -321,7 +343,7 @@
         <span class="bar"></span>
         <p>20년, 유학 상담 현장에서 쌓은 감각을 AI 콘텐츠 제작 스피드에 더하고 있어요.</p>
       </div>
-      <div data-reveal style="display:flex; gap:80px; align-items:flex-start; flex-wrap:wrap; justify-content:center;">
+      <div class="about-cols" data-reveal style="display:flex; gap:80px; align-items:flex-start; flex-wrap:wrap; justify-content:center;">
         <div style="display:flex; flex-direction:column; gap:24px; max-width:380px;">
           <div style="display:flex; flex-direction:column; gap:4px;">
             <span style="font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:44px; color:var(--text-on-light);">SINCE 2009</span>
@@ -499,7 +521,7 @@
       </div>
       <div class="carousel-row" data-reveal>
         <button class="iconbtn" id="cn-left" aria-label="이전">‹</button>
-        <div class="carousel" id="cardnews">
+        <div class="carousel" id="cardnews-track">
           <div class="card"><div class="thumb"><img src="assets/slots/cardnews-1.webp" alt="환율 상승에 대한 어학연수 추천 카드뉴스" loading="lazy"></div>
             <a class="btn edtech sm" style="width:fit-content;" href="https://www.instagram.com/p/DaR2OBimRmL/" target="_blank" rel="noopener">인스타그램에서 보기 <span class="chev">→</span></a></div>
           <div class="card"><div class="thumb"><img src="assets/slots/cardnews-2.webp" alt="카드뉴스 세트 02" loading="lazy"></div>
@@ -650,7 +672,7 @@
 
   // 카드뉴스 캐러셀
   (function () {
-    var track = document.getElementById('cardnews');
+    var track = document.getElementById('cardnews-track');
     var l = document.getElementById('cn-left');
     var r = document.getElementById('cn-right');
     if (!track) return;
