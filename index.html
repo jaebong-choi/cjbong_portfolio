@@ -3,715 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>최재봉 · 유학 컨설팅 × AI 콘텐츠 포트폴리오</title>
-<meta name="description" content="17년간 유학 상담 현장을 지켜온 상담가가 만드는 AI 콘텐츠 — 랜딩페이지 · 영상 · 카드뉴스 · AI 상담 툴. 최재봉 포트폴리오.">
-<meta property="og:title" content="최재봉 · 유학 컨설팅 × AI 콘텐츠 포트폴리오">
-<meta property="og:description" content="유학 컨설팅의 경력, 콘텐츠로 완성합니다.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://cjbong-portfolio.vercel.app/">
-<meta property="og:image" content="https://cjbong-portfolio.vercel.app/assets/portrait.png">
-<meta property="og:image:width" content="1122">
-<meta property="og:image:height" content="1402">
-<meta property="og:image:alt" content="최재봉 프로필 사진">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="최재봉 · 유학 컨설팅 × AI 콘텐츠 포트폴리오">
-<meta name="twitter:description" content="유학 컨설팅의 경력, 콘텐츠로 완성합니다.">
-<meta name="twitter:image" content="https://cjbong-portfolio.vercel.app/assets/portrait.png">
+<title>준비 중입니다</title>
+<meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
 <style>
-  /* ============================================================
-     최재봉 포트폴리오 — Claude Design 핸드오프(Portfolio.dc.html)를
-     자체 완결형 정적 사이트로 재구성.
-     팔레트: edm그린 / 히어로: 메시지형 / 액센트: 섹션별
-     ============================================================ */
   :root {
-    /* palette — edm그린 scheme */
     --accent: #00A44F;
-    --action-primary: #00A44F;
-    --accent-on-dark: color-mix(in srgb, #00A44F 55%, #ffffff);
-    --action-primary-border: color-mix(in srgb, #00A44F 60%, #ffffff);
-    --glow-30: color-mix(in srgb, #00A44F 30%, transparent);
-    --glow-50: color-mix(in srgb, #00A44F 50%, transparent);
-
-    /* per-section case tones */
-    --tone-fintech: #ffa217;  /* SNS */
-    --tone-pharma:  #2ab090;  /* 상담 툴 */
-    --tone-edtech:  #000aff;  /* 카드뉴스 */
-
-    /* surfaces */
-    --surface-page: #ffffff;
-    --surface-ink: #0A231A;
-    --surface-raised-dark: #14402D;
-    --surface-tint: #DBF0E2;
-    --surface-image-fallback: #d9d9d9;
-
-    /* text */
-    --text-on-light: #080808;
-    --text-on-dark: #ffffff;
-    --text-muted-on-dark: #9fb3a9;
-    --text-muted-on-light: #6b7a72;
-
-    /* borders */
-    --border-field: #d8d8d8;
-    --border-subtle-on-dark: color-mix(in srgb, #ffffff 26%, transparent);
-
-    /* type */
-    --font-display: "Noto Sans KR", sans-serif;
-    --font-mono: "Noto Sans KR", sans-serif;
-    --weight-regular: 400;
-    --weight-medium: 500;
-    --weight-semibold: 600;
-    --weight-bold: 700;
-    --weight-extrabold: 900;
-    --text-body: 14px;
-    --text-label: 12px;
-    --text-display-md: 24px;
-    --leading-body: 24px;
-    --tracking-body: 0.01em;
-
-    /* geometry */
-    --radius-control: 4px;
-    --radius-card: 6px;
-    --radius-nav: 8px;
-    --section-pad-y: 64px;
-    --page-width: 1280px;
-
-    /* background pattern (그리드) */
-    --pattern-dark: linear-gradient(color-mix(in srgb, #7FB0FF 6%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, #7FB0FF 6%, transparent) 1px, transparent 1px);
-    --pattern-light: linear-gradient(color-mix(in srgb, var(--accent) 5%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--accent) 5%, transparent) 1px, transparent 1px);
-    --pattern-size: 64px 64px;
+    --ink: #0A231A;
+    --muted: #6b7a72;
   }
-
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html, body { height: 100%; }
   body {
     margin: 0;
-    background: var(--surface-page);
-    color: var(--text-on-light);
-    font-family: var(--font-mono);
+    font-family: "Noto Sans KR", sans-serif;
+    background:
+      radial-gradient(1100px 600px at 50% -10%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 60%),
+      #ffffff;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    padding: 24px;
   }
-  a { color: inherit; }
-  ::selection { background: var(--accent); color: #fff; }
-  img { display: block; }
-
-  /* ---- layout helpers ---- */
-  .section { padding: var(--section-pad-y) 100px; position: relative; overflow: hidden; }
-  .wrap { max-width: var(--page-width); margin: 0 auto; position: relative; }
-  .pattern {
-    position: absolute; inset: 0; pointer-events: none;
-    background-image: var(--pattern-light); background-size: var(--pattern-size);
-  }
-  .pattern.dark { background-image: var(--pattern-dark); }
-  .ring { position: absolute; border-radius: 50%; }
-
-  .eyebrow {
-    font-family: var(--font-mono); font-size: 11px; font-weight: var(--weight-semibold);
-    letter-spacing: 0.08em; color: var(--accent);
-  }
-  .section-head {
-    display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 48px;
+  .card {
+    max-width: 480px;
     text-align: center;
   }
-  .section-head h2 {
-    margin: 0; font-family: var(--font-display); font-weight: var(--weight-extrabold);
-    font-size: 34px; line-height: 1.15; letter-spacing: -0.01em;
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 15px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 26px;
   }
-  .section-head .bar { width: 42px; height: 4px; border-radius: 2px; background: var(--accent); }
-  .section-head p {
-    margin: 0; max-width: 600px; font-family: var(--font-mono); font-size: var(--text-body);
-    line-height: var(--leading-body); letter-spacing: var(--tracking-body); word-break: keep-all;
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
+    animation: pulse 1.8s ease-in-out infinite;
   }
-  .on-dark h2 { color: var(--text-on-dark); }
-  .on-light h2 { color: var(--text-on-light); }
-  .on-dark p { color: var(--text-muted-on-dark); }
-  .on-light p { color: var(--text-muted-on-light); }
-
-  /* ---- buttons ---- */
-  .btn {
-    display: inline-flex; align-items: center; gap: 9px; text-decoration: none;
-    font-family: var(--font-mono); font-weight: var(--weight-bold);
-    border-radius: var(--radius-control); border: 0; cursor: pointer;
-    transition: transform 0.16s ease, filter 0.16s ease, box-shadow 0.16s ease;
-    white-space: nowrap;
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+  h1 {
+    margin: 0 0 14px;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
   }
-  .btn:hover { filter: brightness(0.94); transform: translateY(-1px); }
-  .btn .chev { font-size: 1.05em; line-height: 1; transition: transform 0.16s ease; }
-  .btn:hover .chev { transform: translateX(3px); }
-  .btn.lg { height: 56px; padding: 0 30px; font-size: 16px; }
-  .btn.md { height: 52px; padding: 0 26px; font-size: 15px; }
-  .btn.sm { height: 36px; padding: 0 18px; font-size: 13px; }
-  .btn.primary { background: var(--accent); color: #fff; box-shadow: inset 0 0 0 1px var(--action-primary-border), 0 8px 30px 0 var(--glow-30); }
-  .btn.hero    { background: var(--accent); color: #fff; box-shadow: inset 0 0 0 1px var(--action-primary-border), 0 8px 30px 0 var(--glow-50); }
-  .btn.fintech { background: var(--tone-fintech); color: #241400; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tone-fintech) 55%, #fff), 0 8px 30px 0 color-mix(in srgb, var(--tone-fintech) 28%, transparent); }
-  .btn.pharma  { background: var(--tone-pharma); color: #fff; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tone-pharma) 55%, #fff), 0 8px 30px 0 color-mix(in srgb, var(--tone-pharma) 28%, transparent); }
-  .btn.edtech  { background: var(--tone-edtech); color: #fff; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tone-edtech) 55%, #fff), 0 8px 30px 0 color-mix(in srgb, var(--tone-edtech) 24%, transparent); }
-  .btn.disabled { opacity: 0.5; pointer-events: none; }
-
-  /* ---- nav ---- */
-  .nav {
-    margin: 24px 40px 0; min-height: 70px; border-radius: var(--radius-nav);
-    background: var(--surface-raised-dark); display: flex; align-items: center;
-    justify-content: center; gap: 30px; padding: 12px 28px; flex-wrap: wrap;
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    word-break: keep-all;
   }
-  .nav a {
-    font-family: var(--font-mono); font-size: 14px; text-decoration: none;
-    color: var(--text-muted-on-dark); transition: color 0.15s ease; white-space: nowrap;
+  .sig {
+    margin-top: 34px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
   }
-  .nav a:hover { color: #fff; }
-  .nav a.active { color: var(--accent-on-dark); font-weight: var(--weight-semibold); }
-
-  /* 히어로 텍스트 — 화면 폭에 따라 부드럽게 자동 축소 */
-  .hero-eyebrow { font-size: clamp(11px, 3.2vw, 15px) !important; line-height: 1.5; }
-  .hero-title { font-size: clamp(28px, 7.6vw, 58px) !important; }
-  .hero-desc { font-size: clamp(12px, 3.4vw, 14px) !important; line-height: 1.65 !important; word-break: keep-all; }
-
-  /* ---- reveal ---- */
-  [data-reveal] {
-    opacity: 0; transform: translateY(34px);
-    transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
-    will-change: opacity, transform;
-  }
-  [data-reveal].in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; } }
-
-  /* ---- skill tiles ---- */
-  .skill-tile {
-    position: relative; width: 44px; height: 44px; border-radius: 11px;
-    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    cursor: default; transition: transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .skills-row { display: flex; gap: 8px; flex-wrap: nowrap; }
-  .skill-tile:hover { transform: translateY(-5px) scale(1.08); }
-  .skill-tip {
-    position: absolute; bottom: calc(100% + 9px); left: 50%; white-space: nowrap;
-    background: var(--surface-ink); color: #fff; font-family: var(--font-mono);
-    font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 6px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 5;
-    opacity: 0; transform: translateX(-50%) translateY(4px);
-    transition: opacity 0.16s ease, transform 0.16s ease; pointer-events: none;
-  }
-  .skill-tile:hover .skill-tip { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-  /* ---- cards / grids ---- */
-  .grid2 { display: grid; grid-template-columns: repeat(2, 445px); column-gap: 80px; row-gap: 56px; justify-content: center; }
-  .work { display: flex; flex-direction: column; gap: 16px; width: 445px; }
-  .work .thumb { width: 445px; height: 300px; background: var(--surface-image-fallback); border-radius: var(--radius-card); overflow: hidden; }
-  .work .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
-  .work h3 { margin: 0; font-family: var(--font-display); font-weight: var(--weight-extrabold); font-size: var(--text-display-md); line-height: 1.3; }
-
-  .sub-divider { display: flex; align-items: center; gap: 14px; margin: 0 auto 24px; max-width: 970px; }
-  .sub-divider .t { font-family: var(--font-display); font-weight: var(--weight-extrabold); font-size: 20px; }
-  .sub-divider .d { font-family: var(--font-mono); font-size: 12px; }
-  .sub-divider .line { flex: 1; height: 1px; background: var(--border-field); }
-
-  /* ---- chrome window (상담 툴) ---- */
-  .chrome { width: 340px; height: 300px; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; background: #35363a; box-shadow: 0 24px 60px rgba(0,0,0,0.28), 0 0 0 1px rgba(0,0,0,0.1); }
-  .chrome .bar { display: flex; align-items: center; height: 40px; background: #202124; padding-right: 8px; }
-  .chrome .lights { display: flex; gap: 8px; padding: 0 14px; }
-  .chrome .lights i { width: 11px; height: 11px; border-radius: 50%; }
-  .chrome .tab { align-self: flex-end; height: 30px; margin-bottom: 0; padding: 0 12px; display: flex; align-items: center; gap: 8px; background: #35363a; border-radius: 8px 8px 0 0; min-width: 120px; max-width: 200px; font-family: system-ui, sans-serif; font-size: 12px; color: #e8eaed; }
-  .chrome .tab .fav { width: 13px; height: 13px; border-radius: 50%; background: #5f6368; flex-shrink: 0; }
-  .chrome .tool { height: 38px; background: #35363a; display: flex; align-items: center; gap: 6px; padding: 0 10px; }
-  .chrome .url { flex: 1; height: 28px; border-radius: 14px; background: #282a2d; display: flex; align-items: center; gap: 8px; padding: 0 14px; color: #e8eaed; font-family: system-ui, sans-serif; font-size: 12px; overflow: hidden; }
-  .chrome .url .lock { width: 10px; height: 10px; border-radius: 50%; background: #9aa0a6; opacity: 0.5; flex-shrink: 0; }
-  .chrome .url span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .chrome .view { flex: 1; position: relative; overflow: hidden; background: #fff; }
-  .chrome .view iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 853px; border: 0; transform: scale(0.266); transform-origin: top left; }
-
-  /* ---- carousel ---- */
-  .carousel-row { display: flex; align-items: center; gap: 20px; }
-  .carousel { display: flex; flex: 1 1 auto; min-width: 0; gap: 24px; overflow-x: auto; scroll-behavior: smooth; padding: 4px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
-  .carousel::-webkit-scrollbar { height: 8px; }
-  .carousel::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 4px; }
-  .card { display: flex; flex-direction: column; gap: 14px; width: 280px; flex-shrink: 0; }
-  .card .thumb { width: 280px; height: 350px; background: var(--surface-image-fallback); border-radius: var(--radius-card); overflow: hidden; }
-  .card .thumb img { width: 100%; height: 100%; object-fit: cover; }
-  .iconbtn {
-    width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: #fff;
-    border: 1px solid var(--border-field); color: var(--text-on-light); cursor: pointer;
-    display: flex; align-items: center; justify-content: center; font-size: 18px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .iconbtn:hover { transform: scale(1.06); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
-
-  /* ---- timeline / lists ---- */
-  .split { display: flex; gap: 80px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
-  .split .lead { display: flex; flex-direction: column; gap: 6px; min-width: 200px; }
-  .split .lead .t { font-family: var(--font-display); font-weight: var(--weight-extrabold); font-size: 20px; color: var(--text-on-light); }
-  .split .lead .d { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted-on-light); }
-  .split .body { display: flex; flex-direction: column; flex: 1; min-width: 320px; max-width: 640px; }
-  .row { display: flex; justify-content: space-between; gap: 24px; padding: 11px 0; border-bottom: 1px solid var(--border-field); }
-  .row .period { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted-on-light); white-space: nowrap; }
-  .row .rt { display: flex; flex-direction: column; gap: 4px; text-align: right; }
-  .row .rt .org { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: 16px; color: var(--text-on-light); }
-  .row .rt .desc { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted-on-light); }
-
-  .overseas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; max-width: 920px; margin-left: auto; margin-right: auto; }
-  .overseas-card { padding: 20px 22px; border: 1px solid var(--border-field); border-radius: var(--radius-card); display: flex; flex-direction: column; gap: 6px; }
-  .overseas-card .place { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); }
-  .overseas-card .ot { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: 17px; color: var(--text-on-light); }
-  .overseas-card .od { font-family: var(--font-mono); font-size: 13px; line-height: 20px; color: var(--text-muted-on-light); }
-  .overseas-card .op { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted-on-light); margin-top: 2px; }
-
-  .strength-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 64px; }
-  .strength { display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--text-on-light); }
-  .strength .tag { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); }
-  .strength .t { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: 18px; color: var(--text-on-light); }
-  .strength .d { font-family: var(--font-mono); font-size: 13px; line-height: 21px; color: var(--text-muted-on-light); }
-
-  /* ---- responsive ---- */
-  @media (max-width: 1000px) {
-    .section { padding: 52px 24px; }
-    .section-head h2 { font-size: 27px; }
-    .grid2 { grid-template-columns: 1fr; row-gap: 44px; }
-    .work, .work .thumb { width: 100%; max-width: 445px; margin-left: auto; margin-right: auto; }
-    .work .thumb { height: auto; aspect-ratio: 445 / 300; }
-    .strength-grid { grid-template-columns: 1fr; gap: 28px; }
-    .overseas-grid { grid-template-columns: 1fr; }
-    .hero-inner { padding: 40px 24px 56px !important; }
-
-    /* 2단 → 1단 세로 스택 (경력/해외 경험, 핵심 역량) */
-    .split { flex-direction: column; gap: 20px; align-items: stretch; }
-    .split .lead { min-width: 0; }
-    .split .body { min-width: 0; max-width: none; width: 100%; }
-
-    /* About 두 열 간격 축소 */
-    .about-cols { gap: 40px !important; }
-
-    /* 카드뉴스 좌우 여백 축소 (데스크톱 85px 인라인 무력화) */
-    #cardnews { padding-left: 20px !important; padding-right: 20px !important; }
-  }
-  @media (max-width: 560px) {
-    .nav { gap: 14px 16px; margin: 16px 16px 0; padding: 12px 18px; }
-    .nav a { font-size: 13px; }
-    .skills-row { gap: 6px; }
-    .skill-tile { width: 40px; height: 40px; }
-    .skill-tile span[style*="font-size:18px"] { font-size: 16px; }
-
-    /* 타임라인 행: 기간 위 / 소속 아래로 자연스럽게 정렬 */
-    .row { gap: 12px; }
-    .row .rt { max-width: 62%; }
-
-    /* 카드뉴스: 모바일은 스와이프, 화살표 숨김 + 카드 화면폭에 맞춤 */
-    .carousel-row .iconbtn { display: none; }
-    .carousel-row { gap: 0; }
-    .card, .card .thumb { width: min(74vw, 280px); }
-    .card .thumb { height: auto; aspect-ratio: 280 / 350; }
+  @media (max-width: 480px) {
+    h1 { font-size: 27px; }
   }
 </style>
 </head>
 <body>
-<div id="top">
-
-  <!-- ============ HERO (dark, 메시지형) ============ -->
-  <header style="background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 26%, var(--surface-ink)) 0%, var(--surface-ink) 58%, color-mix(in srgb, var(--accent) 14%, var(--surface-ink)) 100%); position: relative; overflow: hidden;">
-    <div class="pattern dark" aria-hidden="true">
-      <div class="ring" style="top:-180px; right:-140px; width:480px; height:480px; border:1px solid color-mix(in srgb,#7FB0FF 38%,transparent);"></div>
-      <div class="ring" style="top:-120px; right:-80px; width:360px; height:360px; border:1px solid color-mix(in srgb,#7FB0FF 22%,transparent);"></div>
-      <div class="ring" style="bottom:-170px; left:-130px; width:400px; height:400px; border:1px solid color-mix(in srgb,var(--accent) 60%,transparent);"></div>
-      <div class="ring" style="bottom:-120px; left:-80px; width:290px; height:290px; border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);"></div>
-      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-46%); width:1100px; height:640px; background:radial-gradient(ellipse at center, color-mix(in srgb,var(--accent) 26%,transparent) 0%, transparent 65%);"></div>
-    </div>
-    <div class="wrap">
-      <nav class="nav">
-        <a href="#top" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#career">경력</a>
-        <a href="#consult">상담 AI 툴</a>
-        <a href="#landing">랜딩페이지</a>
-        <a href="#sns">SNS 콘텐츠</a>
-        <a href="#cardnews">카드뉴스</a>
-        <a href="#etc">기타 제작</a>
-        <a href="#strength">핵심 역량</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="hero-inner" style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:64px 100px 96px; gap:34px;">
-        <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <span class="hero-eyebrow" style="font-family:var(--font-mono); font-size:15px; font-weight:var(--weight-semibold); letter-spacing:0.08em; color:var(--accent-on-dark);">PORTFOLIO OF JAEBONG CHOI<br>CONSULTING × CONTENT</span>
-          <h1 class="hero-title" style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:58px; line-height:1.16; color:var(--text-on-dark);">유학 컨설팅의 경력<br>콘텐츠로 완성합니다</h1>
-          <p class="hero-desc" style="margin:0; max-width:620px; font-family:var(--font-mono); font-size:var(--text-body); line-height:var(--leading-body); letter-spacing:var(--tracking-body); color:var(--text-muted-on-dark);">유학업을 사랑해, 더 잘하기 위해 계속 배웁니다.<br>상담에서 쌓은 경험을 콘텐츠로 시각화합니다.</p>
-        </div>
-        <a class="btn hero lg" href="#consult">포트폴리오 보기 <span class="chev">→</span></a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ============ ABOUT (light) ============ -->
-  <section id="about" class="section on-light" style="background:var(--surface-page);">
-    <div class="pattern" aria-hidden="true">
-      <div class="ring" style="top:-140px; right:-120px; width:340px; height:340px; border:1px solid color-mix(in srgb,var(--accent) 18%,transparent);"></div>
-      <div class="ring" style="top:-100px; right:-80px; width:250px; height:250px; border:1px solid color-mix(in srgb,var(--accent) 10%,transparent);"></div>
-    </div>
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>About Me</h2>
-        <span class="bar"></span>
-        <p>17년, 유학 상담 현장에서 쌓은 감각을 AI 콘텐츠 제작 스피드에 더하고 있어요.</p>
-      </div>
-      <div class="about-cols" data-reveal style="display:flex; gap:80px; align-items:flex-start; flex-wrap:wrap; justify-content:center;">
-        <div style="display:flex; flex-direction:column; gap:24px; max-width:380px;">
-          <div style="display:flex; flex-direction:column; gap:4px;">
-            <span style="font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:44px; color:var(--text-on-light);">SINCE 2009</span>
-            <span style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted-on-light);">약 17년 경력의 유학 상담 &amp; 콘텐츠 제작 통산 경력</span>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:14px;">
-            <span style="font-family:var(--font-mono); font-size:var(--text-body); color:var(--text-on-light);">주로 사용하는 프로그램</span>
-            <div class="skills-row">
-              <div class="skill-tile" style="background:#00005B; box-shadow:inset 0 0 0 1.5px #9999FF;"><span style="font-family:var(--font-display); font-weight:900; font-size:18px; color:#EA77FF; letter-spacing:-0.02em;">Pr</span><span class="skill-tip">Premiere Pro</span></div>
-              <div class="skill-tile" style="background:#001E36; box-shadow:inset 0 0 0 1.5px #31A8FF;"><span style="font-family:var(--font-display); font-weight:900; font-size:18px; color:#31A8FF; letter-spacing:-0.02em;">Ps</span><span class="skill-tip">Photoshop</span></div>
-              <div class="skill-tile" style="background:#C6F135; box-shadow:inset 0 0 0 1.5px #C6F135;"><img src="assets/logo-higgsfield.png" alt="Higgsfield" style="width:100%; height:100%; object-fit:cover; border-radius:11px;"><span class="skill-tip">Higgsfield</span></div>
-              <div class="skill-tile" style="background:#0B0B0B; box-shadow:inset 0 0 0 1.5px #333333;"><img src="assets/logo-flow.png" alt="Google Flow" style="width:100%; height:100%; object-fit:contain; padding:6px;"><span class="skill-tip">Google Flow</span></div>
-              <div class="skill-tile" style="background:#F7F4EE; box-shadow:inset 0 0 0 1.5px #E9DFCF;"><img src="assets/logo-claude.png" alt="Claude" style="width:100%; height:100%; object-fit:contain; padding:6px;"><span class="skill-tip">Claude</span></div>
-              <div class="skill-tile" style="background:#FFFFFF; box-shadow:inset 0 0 0 1.5px #E2E2E2;"><img src="assets/logo-gemini.png" alt="Gemini" style="width:100%; height:100%; object-fit:contain; padding:6px;"><span class="skill-tip">Gemini</span></div>
-              <div class="skill-tile" style="background:#FFFFFF; box-shadow:inset 0 0 0 1.5px #E2E2E2;"><img src="assets/logo-chatgpt.png" alt="ChatGPT" style="width:100%; height:100%; object-fit:contain; padding:6px;"><span class="skill-tip">ChatGPT</span></div>
-            </div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:10px;">
-            <span style="font-family:var(--font-mono); font-size:var(--text-body); color:var(--text-on-light);">유학 상담 관련 자격증</span>
-            <div style="display:flex; flex-direction:column; gap:12px; padding:18px 20px; border:1px solid var(--border-field); border-radius:6px;">
-              <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
-                <span style="font-family:var(--font-display); font-weight:900; font-size:15px; color:var(--accent); white-space:nowrap;">British Council</span>
-                <span style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted-on-light);">영국문화원</span>
-              </div>
-              <span style="font-family:var(--font-display); font-weight:var(--weight-bold); font-size:15px; line-height:20px; color:var(--text-on-light);">UK Agent and Counsellor Training — Certification Award</span>
-              <div style="display:flex; flex-direction:column; gap:4px; font-family:var(--font-mono); font-size:12px; line-height:18px; color:var(--text-muted-on-light);">
-                <span>Role · Agent (유학 에이전트)</span>
-                <span>발급일 · 2025.04.28 (2년간 유효)</span>
-                <span>인증 코드 · 67842</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="display:flex; flex-direction:column; align-items:center; gap:16px; flex-shrink:0;">
-          <div style="width:300px; height:300px; border-radius:50%; overflow:hidden; box-shadow:0 0 0 1px var(--border-field), 0 18px 40px rgba(12,29,66,0.16);">
-            <img src="assets/portrait.png" alt="최재봉 프로필 사진" style="width:100%; height:100%; object-fit:cover; object-position:50% 8%;">
-          </div>
-          <span style="font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:31px; color:var(--text-on-light);">최재봉</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 상담 AI 툴 (tint) ============ -->
-  <section id="consult" class="section on-light" style="background:var(--surface-tint);">
-    <div class="pattern" aria-hidden="true">
-      <div class="ring" style="bottom:-150px; left:-130px; width:360px; height:360px; border:1px solid color-mix(in srgb,var(--accent) 20%,transparent);"></div>
-      <div class="ring" style="bottom:-110px; left:-90px; width:270px; height:270px; border:1px solid color-mix(in srgb,var(--accent) 11%,transparent);"></div>
-    </div>
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>유학 상담 관련 툴 제작</h2>
-        <span class="bar" style="background:var(--tone-pharma);"></span>
-        <p>상담 노하우를 그대로 담은 AI 도움을 받아 제작한 상담 툴</p>
-        <div style="display:inline-flex; align-items:center; gap:10px; margin-top:16px; padding:11px 18px; border-radius:12px; background:color-mix(in srgb,#f5a623 15%,transparent); border:1px solid color-mix(in srgb,#f5a623 55%,transparent); font-family:var(--font-mono); font-size:13.5px; line-height:1.5; font-weight:700; color:var(--text-on-light); max-width:100%;">
-          <span style="flex-shrink:0; width:9px; height:9px; border-radius:50%; background:#f5a623; box-shadow:0 0 0 4px color-mix(in srgb,#f5a623 25%,transparent);"></span>
-          <span>영국과 호주 사이트는 입사지원을 위해 Beta버전을 만들어 보았습니다</span>
-        </div>
-      </div>
-      <div data-reveal style="display:flex; flex-wrap:wrap; gap:44px 40px; align-items:flex-start; justify-content:center;">
-        <!-- consult cards -->
-        <div style="display:flex; flex-direction:column; gap:20px; width:340px;">
-          <div class="chrome">
-            <div class="bar"><div class="lights"><i style="background:#ff5f57;"></i><i style="background:#febc2e;"></i><i style="background:#28c840;"></i></div><div class="tab"><span class="fav"></span><span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">UK Master AI</span></div></div>
-            <div class="tool"><div class="url"><span class="lock"></span><span>jaebong-choi.github.io/edm-uk-master-ai</span></div></div>
-            <div class="view"><iframe src="https://jaebong-choi.github.io/edm-uk-master-ai/" title="영국 석사 진학 AI 컨설팅" scrolling="no" loading="lazy"></iframe></div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:6px;">
-            <span class="eyebrow" style="color:var(--tone-pharma);">UK MASTER</span>
-            <h3 style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:19px; line-height:1.3; color:var(--text-on-light);">영국 석사 진학 AI 컨설팅 (Beta)</h3>
-          </div>
-          <a class="btn pharma sm" style="width:fit-content;" href="https://jaebong-choi.github.io/edm-uk-master-ai/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a>
-        </div>
-
-        <div style="display:flex; flex-direction:column; gap:20px; width:340px;">
-          <div class="chrome">
-            <div class="bar"><div class="lights"><i style="background:#ff5f57;"></i><i style="background:#febc2e;"></i><i style="background:#28c840;"></i></div><div class="tab"><span class="fav"></span><span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">AU University AI</span></div></div>
-            <div class="tool"><div class="url"><span class="lock"></span><span>jaebong-choi.github.io/edm-au-master-ai</span></div></div>
-            <div class="view"><iframe src="https://jaebong-choi.github.io/edm-au-master-ai/" title="호주 대학진학 AI 컨설팅" scrolling="no" loading="lazy"></iframe></div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:6px;">
-            <span class="eyebrow" style="color:var(--tone-pharma);">AU UNIVERSITY</span>
-            <h3 style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:19px; line-height:1.3; color:var(--text-on-light);">호주 대학진학 AI 컨설팅 (Beta)</h3>
-          </div>
-          <a class="btn pharma sm" style="width:fit-content;" href="https://jaebong-choi.github.io/edm-au-master-ai/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 랜딩 페이지 (dark) ============ -->
-  <section id="landing" class="section on-dark" style="background:var(--surface-ink);">
-    <div class="pattern dark" aria-hidden="true">
-      <div class="ring" style="top:-160px; left:-140px; width:420px; height:420px; border:1px solid color-mix(in srgb,#7FB0FF 20%,transparent);"></div>
-      <div class="ring" style="top:-110px; left:-90px; width:300px; height:300px; border:1px solid color-mix(in srgb,#7FB0FF 11%,transparent);"></div>
-    </div>
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>마케팅/CRM용 랜딩 페이지</h2>
-        <span class="bar"></span>
-        <p>유학상품 기획부터 상담의 내용을 담은 CRM 등 랜딩 페이지</p>
-      </div>
-      <div class="grid2" data-reveal>
-        <div class="work"><div class="thumb"><img src="assets/slots/landing-1.webp" alt="몰타 영상용 랜딩 페이지" loading="lazy"></div>
-          <h3 style="color:var(--text-on-dark);">몰타 영상용 랜딩 페이지</h3>
-          <a class="btn primary sm" style="width:fit-content;" href="https://jaebong-choi.github.io/maltamarketing/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-        <div class="work"><div class="thumb"><img src="assets/slots/landing-2.webp" alt="뉴욕 상담 후 CRM페이지 전달 사례" loading="lazy"></div>
-          <h3 style="color:var(--text-on-dark);">뉴욕 상담 후 CRM페이지 전달 사례</h3>
-          <a class="btn primary sm" style="width:fit-content;" href="https://moonlit-cranachan-48c10a.netlify.app/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-        <div class="work"><div class="thumb"><img src="assets/slots/landing-3.webp" alt="호주/캐나다 어학연수 상담 후 CRM" loading="lazy"></div>
-          <h3 style="color:var(--text-on-dark);">호주/캐나다 어학연수 상담 후 CRM</h3>
-          <a class="btn primary sm" style="width:fit-content;" href="https://willowy-tulumba-f536d4.netlify.app/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-        <div class="work"><div class="thumb"><img src="assets/slots/landing-4.webp" alt="당일 방문 예약 후 CRM 전달 폼 자동생성" loading="lazy"></div>
-          <h3 style="color:var(--text-on-dark);">당일 방문 예약 후 CRM 전달 폼 자동생성</h3>
-          <a class="btn primary sm" style="width:fit-content;" href="https://magenta-nasturtium-b079c6.netlify.app/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SNS 숏폼/롱폼 (light) ============ -->
-  <section id="sns" class="section on-light" style="background:var(--surface-page);">
-    <div class="pattern" aria-hidden="true">
-      <div class="ring" style="bottom:-140px; right:-120px; width:330px; height:330px; border:1px solid color-mix(in srgb,var(--accent) 18%,transparent);"></div>
-      <div class="ring" style="bottom:-100px; right:-80px; width:240px; height:240px; border:1px solid color-mix(in srgb,var(--accent) 10%,transparent);"></div>
-    </div>
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>최근 제작 SNS 숏폼 &amp; 롱폼</h2>
-        <span class="bar" style="background:var(--tone-fintech);"></span>
-        <p>숏폼·롱폼 가리지 않고 제작 합니다.<br>최근엔 AI를 이용하여 제작 속도를 끌어올리고 있습니다.</p>
-        <div style="display:inline-flex; align-items:center; gap:10px; margin-top:16px; padding:11px 18px; border-radius:12px; background:color-mix(in srgb,#f5a623 15%,transparent); border:1px solid color-mix(in srgb,#f5a623 55%,transparent); font-family:var(--font-mono); font-size:13.5px; line-height:1.5; font-weight:700; color:var(--text-on-light); max-width:100%;">
-          <span style="flex-shrink:0; width:9px; height:9px; border-radius:50%; background:#f5a623; box-shadow:0 0 0 4px color-mix(in srgb,#f5a623 25%,transparent);"></span>
-          <span>edm유학센터 홍보용 포트폴리오 영상</span>
-        </div>
-      </div>
-
-      <div data-reveal style="display:flex; justify-content:center; margin-bottom:72px;">
-        <div class="work" style="width:300px;"><div class="thumb" style="width:300px; height:auto; aspect-ratio:9 / 16;"><img src="assets/slots/sns-3.webp" alt="edm유학센터 어학연수 홍보 숏폼" loading="lazy" style="object-position:50% 30%;"></div>
-          <h3 style="color:var(--text-on-light);">edm유학센터<br>30+ 과정 홍보 쇼츠</h3>
-          <a class="btn fintech sm" style="width:fit-content;" href="https://www.youtube.com/shorts/yJL-hQpJZ3w" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-      </div>
-
-      <div class="sub-divider" data-reveal><span class="t" style="color:var(--text-on-light);">숏폼</span><span class="d" style="color:var(--text-muted-on-light);">최근 제작한 숏폼 콘텐츠</span><span class="line"></span></div>
-      <div class="grid2" data-reveal style="margin-bottom:72px;">
-        <div class="work"><div class="thumb"><img src="assets/slots/sns-1.webp" alt="몰타 어학연수 홍보 영상" loading="lazy"></div>
-          <h3 style="color:var(--text-on-light);">몰타 어학연수 홍보 영상</h3>
-          <a class="btn fintech sm" style="width:fit-content;" href="https://youtube.com/shorts/gv0BVKMfSv4" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-        <div class="work"><div class="thumb"><img src="assets/slots/sns-2.webp" alt="힉스필드를 통한 영상 제작" loading="lazy"></div>
-          <h3 style="color:var(--text-on-light);">힉스필드를 통한 영상 제작</h3>
-          <a class="btn fintech sm" style="width:fit-content;" href="https://drive.google.com/file/d/1e7cKrO5Q-E4_2vryHU2ETt2Kp4oLXNfh/view?usp=sharing" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-      </div>
-
-      <div class="sub-divider" data-reveal><span class="t" style="color:var(--text-on-light);">롱폼</span><span class="d" style="color:var(--text-muted-on-light);">최근 제작한 롱폼 콘텐츠</span><span class="line"></span></div>
-      <div class="grid2" data-reveal>
-        <div class="work"><div class="thumb"><img src="assets/slots/sns-long-1.webp" alt="필리핀 안내 롱폼 편집" loading="lazy"></div>
-          <h3 style="color:var(--text-on-light);">필리핀 안내 롱폼 편집</h3>
-          <a class="btn fintech sm" style="width:fit-content;" href="https://www.youtube.com/watch?v=VtpWzUSzj0I" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-        <div class="work"><div class="thumb"><img src="assets/slots/sns-long-2.webp" alt="'영국에서 살아남았다' 쇼츠 주인공 인터뷰" loading="lazy"></div>
-          <h3 style="color:var(--text-on-light);">'영국에서 살아남았다' 쇼츠 주인공 인터뷰</h3>
-          <a class="btn fintech sm" style="width:fit-content;" href="https://youtu.be/H3v_lnDJaT8?si=u-6_OP-b-_GgiLLt" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 카드뉴스 (tint, carousel) ============ -->
-  <section id="cardnews" class="section on-light" style="background:var(--surface-tint); padding-left:85px; padding-right:85px;">
-    <div class="pattern" aria-hidden="true">
-      <div class="ring" style="top:-150px; left:-120px; width:340px; height:340px; border:1px solid color-mix(in srgb,var(--accent) 18%,transparent);"></div>
-      <div class="ring" style="top:-110px; left:-80px; width:250px; height:250px; border:1px solid color-mix(in srgb,var(--accent) 10%,transparent);"></div>
-    </div>
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>SNS용 카드 뉴스</h2>
-        <span class="bar" style="background:var(--tone-edtech);"></span>
-        <p>기획 · 카피 · 디자인을 자동화해 뽑아낸 카드 뉴스 제작</p>
-      </div>
-      <div class="carousel-row" data-reveal>
-        <button class="iconbtn" id="cn-left" aria-label="이전">‹</button>
-        <div class="carousel" id="cardnews-track">
-          <div class="card"><div class="thumb"><img src="assets/slots/cardnews-1.webp" alt="환율 상승에 대한 어학연수 추천 카드뉴스" loading="lazy"></div>
-            <a class="btn edtech sm" style="width:fit-content;" href="https://www.instagram.com/p/DaR2OBimRmL/" target="_blank" rel="noopener">인스타그램에서 보기 <span class="chev">→</span></a></div>
-          <div class="card"><div class="thumb"><img src="assets/slots/cardnews-2.webp" alt="카드뉴스 세트 02" loading="lazy"></div>
-            <a class="btn edtech sm" style="width:fit-content;" href="https://www.instagram.com/p/DaPhUc3mSCX/" target="_blank" rel="noopener">인스타그램에서 보기 <span class="chev">→</span></a></div>
-          <div class="card"><div class="thumb"><img src="assets/slots/cardnews-3.webp" alt="카드뉴스 세트 03" loading="lazy"></div>
-            <a class="btn edtech sm" style="width:fit-content;" href="https://www.instagram.com/p/DaO4CG2mbjz/" target="_blank" rel="noopener">인스타그램에서 보기 <span class="chev">→</span></a></div>
-          <div class="card"><div class="thumb"><img src="assets/slots/cardnews-4.webp" alt="카드뉴스 세트 04" loading="lazy"></div>
-            <a class="btn edtech sm" style="width:fit-content;" href="https://www.instagram.com/p/DaUUOpMmVsi/" target="_blank" rel="noopener">인스타그램에서 보기 <span class="chev">→</span></a></div>
-        </div>
-        <button class="iconbtn" id="cn-right" aria-label="다음">›</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 기타 제작 (dark) ============ -->
-  <section id="etc" class="section on-dark" style="background:var(--surface-ink);">
-    <div class="pattern dark" aria-hidden="true">
-      <div class="ring" style="top:-160px; right:-140px; width:420px; height:420px; border:1px solid color-mix(in srgb,#7FB0FF 20%,transparent);"></div>
-      <div class="ring" style="top:-110px; right:-90px; width:300px; height:300px; border:1px solid color-mix(in srgb,#7FB0FF 11%,transparent);"></div>
-    </div>
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>기타 제작</h2>
-        <span class="bar"></span>
-      </div>
-      <div class="grid2" data-reveal>
-        <div class="work"><div class="thumb"><img src="assets/slots/etc-1.webp" alt="Notion 오리엔테이션 자료" loading="lazy"></div>
-          <h3 style="color:var(--text-on-dark);">Notion 오리엔테이션 자료</h3>
-          <p style="margin:0; font-family:var(--font-mono); font-size:var(--text-body); line-height:var(--leading-body); color:var(--text-muted-on-dark);">내가 그냥 있으면 좋을 것 같아 만든 출국 OT자료</p>
-          <a class="btn primary sm" style="width:fit-content;" href="https://app.notion.com/p/OT-3869ef3ab71881ed9e44d841980c3b5e?source=copy_link" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-        <div class="work"><div class="thumb"><img src="assets/slots/etc-2.webp" alt="AI 생성 이미지 모음" loading="lazy"></div>
-          <h3 style="color:var(--text-on-dark);">AI 생성 이미지 모음</h3>
-          <p style="margin:0; font-family:var(--font-mono); font-size:var(--text-body); line-height:var(--leading-body); color:var(--text-muted-on-dark);">AI를 통해 영상 제작에 필요한 이미지 생성</p>
-          <a class="btn primary sm" style="width:fit-content;" href="https://drive.google.com/drive/folders/1uMYcvmpFicEoqGrW4cNUXXylONvHA4ZV?usp=sharing" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 경력 & 해외 경험 (white) ============ -->
-  <section id="career" class="section on-light" style="background:var(--surface-page);">
-    <div class="pattern" aria-hidden="true">
-      <div class="ring" style="top:120px; right:-150px; width:360px; height:360px; border:1px solid color-mix(in srgb,var(--accent) 16%,transparent);"></div>
-      <div class="ring" style="top:160px; right:-110px; width:270px; height:270px; border:1px solid color-mix(in srgb,var(--accent) 9%,transparent);"></div>
-    </div>
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>경력 &amp; 해외 경험</h2>
-        <span class="bar"></span>
-        <p>17년간 유학 상담 현장을 지켜온 발자취와, 직접 발로 뛴 해외 경험들.</p>
-      </div>
-
-      <div class="split" data-reveal style="margin-bottom:56px;">
-        <div class="lead"><span class="t">경력 사항</span><span class="d">통산 17년 · 유학 상담 &amp; 콘텐츠</span></div>
-        <div class="body">
-          <div class="row"><span class="period">2024.01 – 현재</span><div class="rt"><span class="org">종로유학원</span><span class="desc">유학 컨설팅 및 컨텐츠 제작</span></div></div>
-          <div class="row"><span class="period">2022.01 – 2023.09</span><div class="rt"><span class="org">edm 에듀케이션</span><span class="desc">지사 관리 및 영상편집 프리랜서</span></div></div>
-          <div class="row"><span class="period">2021.04 – 2021.12</span><div class="rt"><span class="org">중앙고시학원</span><span class="desc">공무원 학원 영상편집 및 제작</span></div></div>
-          <div class="row"><span class="period">2018.01 – 2020.10</span><div class="rt"><span class="org">edm 에듀케이션</span><span class="desc">유학 컨설팅</span></div></div>
-          <div class="row"><span class="period">2010.01 – 2017.12</span><div class="rt"><span class="org">iae유학네트</span><span class="desc">유학 컨설팅</span></div></div>
-        </div>
-      </div>
-
-      <div class="split" data-reveal>
-        <div class="lead"><span class="t">해외 경험</span><span class="d">직접 발로 뛴 현지 경험</span></div>
-        <div class="body">
-          <div class="overseas-grid" style="margin-top:0; max-width:none;">
-            <div class="overseas-card"><span class="place">UNITED KINGDOM</span><span class="ot">영국 어학연수</span><span class="od">10개월 어학연수, Intermediate에서 Advanced까지</span><span class="op">2008 – 2009</span></div>
-            <div class="overseas-card"><span class="place">MALTA</span><span class="ot">몰타 어학연수</span><span class="od">IELS 몰타 어학 과정 수료</span><span class="op">2023</span></div>
-            <div class="overseas-card"><span class="place">USA</span><span class="ot">미국 출장 · 팸트립</span><span class="od">동·중·서부 어학기관 &amp; 대학교 투어 참가</span><span class="op">2010 · 2013 · 2025</span></div>
-            <div class="overseas-card"><span class="place">EUROPE</span><span class="ot">유럽 팸트립</span><span class="od">EF 유럽 연수 · 스페인 · 독일 · 프랑스</span><span class="op">2017</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 핵심 역량 (tint) ============ -->
-  <section id="strength" class="section on-light" style="background:var(--surface-tint);">
-    <div class="pattern" aria-hidden="true">
-      <div class="ring" style="top:-140px; left:-120px; width:340px; height:340px; border:1px solid color-mix(in srgb,var(--accent) 18%,transparent);"></div>
-      <div class="ring" style="top:-100px; left:-80px; width:250px; height:250px; border:1px solid color-mix(in srgb,var(--accent) 10%,transparent);"></div>
-    </div>
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>핵심 역량</h2>
-        <span class="bar"></span>
-        <p>현장에서 검증된 역량, 팀과 지키는 원칙</p>
-      </div>
-      <div class="strength-grid" data-reveal>
-        <div class="strength"><span class="tag">COUNSELING &amp; SALES</span><span class="t">유학 상담 · 세일즈</span><span class="d">17년간 상담부터 계약 · 수속까지 전 과정을 직접 담당</span></div>
-        <div class="strength"><span class="tag">GLOBAL EXPERIENCE</span><span class="t">국가별 현지 경험</span><span class="d">영국 · 몰타 · 미국 · 캐나다 · 호주 등 직접 경험한 현지 눈높이 상담</span></div>
-        <div class="strength"><span class="tag">AI CONTENT</span><span class="t">AI 콘텐츠 제작</span><span class="d">랜딩페이지 · 영상 · 카드뉴스 · AI 상담 툴 직접 제작</span></div>
-      </div>
-      <div class="split" data-reveal>
-        <div class="lead"><span class="t">내가 추구하는 업무의 방향성</span></div>
-        <div class="body">
-          <div class="row" style="padding:14px 0;"><span style="font-family:var(--font-display); font-weight:var(--weight-bold); font-size:16px; color:var(--text-on-light); white-space:nowrap;">꾸준한 학습</span><span style="font-family:var(--font-mono); font-size:13px; line-height:21px; color:var(--text-muted-on-light); text-align:right; max-width:420px;">새로운 툴을 스스로 익혀 실무에 적용</span></div>
-          <div class="row" style="padding:14px 0;"><span style="font-family:var(--font-display); font-weight:var(--weight-bold); font-size:16px; color:var(--text-on-light); white-space:nowrap;">팀과 나누기</span><span style="font-family:var(--font-mono); font-size:13px; line-height:21px; color:var(--text-muted-on-light); text-align:right; max-width:420px;">제작한 툴과 자료는 팀 자산으로 공유</span></div>
-          <div class="row" style="padding:14px 0;"><span style="font-family:var(--font-display); font-weight:var(--weight-bold); font-size:16px; color:var(--text-on-light); white-space:nowrap;">피드백으로 성장</span><span style="font-family:var(--font-mono); font-size:13px; line-height:21px; color:var(--text-muted-on-light); text-align:right; max-width:420px;">결과를 돌아보고 응용하며 성장 추구</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT (dark) ============ -->
-  <section id="contact" class="section on-dark" style="background:var(--surface-ink); padding-bottom:64px;">
-    <div class="pattern dark" aria-hidden="true">
-      <div class="ring" style="top:50%; left:50%; transform:translate(-50%,-50%); width:560px; height:560px; border:1px solid color-mix(in srgb,#7FB0FF 14%,transparent);"></div>
-      <div class="ring" style="top:50%; left:50%; transform:translate(-50%,-50%); width:420px; height:420px; border:1px solid color-mix(in srgb,#7FB0FF 9%,transparent);"></div>
-    </div>
-    <div class="wrap" style="display:flex; flex-direction:column; align-items:center;">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <span class="bar"></span>
-        <p style="max-width:500px;">새로운 프로젝트나 협업 제안은 언제든 환영합니다.</p>
-      </div>
-      <div style="display:flex; flex-direction:column; align-items:center; gap:24px;">
-        <a href="mailto:cjbong23@hanmail.net" style="font-family:var(--font-display); font-weight:var(--weight-bold); font-size:24px; color:var(--text-on-dark); text-decoration:none;">cjbong23@hanmail.net</a>
-        <a class="btn primary md" href="mailto:cjbong23@hanmail.net">이메일 보내기 <span class="chev">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <footer style="background:var(--surface-raised-dark); color:var(--text-muted-on-dark); text-align:center; padding:28px 24px; font-family:var(--font-mono); font-size:12px;">
-    © <span id="yr"></span> 최재봉 · JAEBONG CHOI — 유학 컨설팅 × AI 콘텐츠
-  </footer>
-</div>
-
-<script>
-  // 연도
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // 스크롤 리빌
-  (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var els = document.querySelectorAll('[data-reveal]');
-    if (reduce || !('IntersectionObserver' in window)) {
-      els.forEach(function (el) { el.classList.add('in'); });
-      return;
-    }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
-    els.forEach(function (el) { io.observe(el); });
-  })();
-
-  // 카드뉴스 캐러셀
-  (function () {
-    var track = document.getElementById('cardnews-track');
-    var l = document.getElementById('cn-left');
-    var r = document.getElementById('cn-right');
-    if (!track) return;
-    if (l) l.addEventListener('click', function () { track.scrollBy({ left: -320, behavior: 'smooth' }); });
-    if (r) r.addEventListener('click', function () { track.scrollBy({ left: 320, behavior: 'smooth' }); });
-  })();
-
-  // 스크롤 위치에 따라 네비 active 갱신
-  (function () {
-    var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
-    var map = {};
-    links.forEach(function (a) {
-      var id = a.getAttribute('href').slice(1);
-      var sec = document.getElementById(id);
-      if (sec) map[id] = a;
-    });
-    var ids = Object.keys(map);
-    if (!ids.length || !('IntersectionObserver' in window)) return;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          links.forEach(function (a) { a.classList.remove('active'); });
-          if (map[e.target.id]) map[e.target.id].classList.add('active');
-        }
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    ids.forEach(function (id) { io.observe(document.getElementById(id)); });
-  })();
-</script>
+  <main class="card">
+    <span class="badge"><span class="dot"></span>PREPARING</span>
+    <h1>준비 중입니다</h1>
+    <p>더 나은 모습으로 곧 다시 찾아뵙겠습니다.<br>페이지를 잠시 정비하고 있어요.</p>
+    <div class="sig">최재봉 · 유학 컨설팅 × AI 콘텐츠</div>
+  </main>
 </body>
 </html>
