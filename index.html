@@ -138,9 +138,12 @@
     transition: transform 0.16s ease, filter 0.16s ease, box-shadow 0.16s ease;
     white-space: nowrap;
   }
-  .btn:hover { filter: brightness(0.94); transform: translateY(-1px); }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover { filter: brightness(0.94); transform: translateY(-1px); }
+    .btn:hover .chev { transform: translateX(3px); }
+  }
+  .btn:active { transform: translateY(0) scale(0.97); }
   .btn .chev { font-size: 1.05em; line-height: 1; transition: transform 0.16s ease; }
-  .btn:hover .chev { transform: translateX(3px); }
   .btn.lg { height: 56px; padding: 0 30px; font-size: 16px; }
   .btn.md { height: 52px; padding: 0 26px; font-size: 15px; }
   .btn.sm { height: 36px; padding: 0 18px; font-size: 13px; }
@@ -169,14 +172,41 @@
   .hero-title { font-size: clamp(28px, 7.6vw, 58px) !important; }
   .hero-desc { font-size: clamp(12px, 3.4vw, 14px) !important; line-height: 1.65 !important; word-break: keep-all; }
 
+  /* 히어로 첫 진입: 순차 페이드인 (60ms 간격, 1회성 연출) */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-eyebrow, .hero-title, .hero-desc, .hero-inner .btn.hero {
+      animation: heroIn 0.5s cubic-bezier(0.22,1,0.36,1) backwards;
+    }
+    .hero-title { animation-delay: 60ms; }
+    .hero-desc { animation-delay: 120ms; }
+    .hero-inner .btn.hero { animation-delay: 180ms; }
+  }
+  @keyframes heroIn { from { opacity: 0; transform: translateY(14px) scale(0.985); } }
+
   /* ---- reveal ---- */
   [data-reveal] {
     opacity: 0; transform: translateY(34px);
-    transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+    transition: opacity 0.45s cubic-bezier(0.22,1,0.36,1), transform 0.45s cubic-bezier(0.22,1,0.36,1);
     will-change: opacity, transform;
   }
   [data-reveal].in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; } }
+
+  /* ---- reveal stagger: 그리드 자식 순차 진입 (60ms 간격) ---- */
+  [data-reveal].stagger { opacity: 1; transform: none; }
+  [data-reveal].stagger > * {
+    opacity: 0; transform: translateY(22px);
+    transition: opacity 0.45s cubic-bezier(0.22,1,0.36,1), transform 0.45s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].stagger.in > * { opacity: 1; transform: none; }
+  [data-reveal].stagger.in > *:nth-child(2) { transition-delay: 60ms; }
+  [data-reveal].stagger.in > *:nth-child(3) { transition-delay: 120ms; }
+  [data-reveal].stagger.in > *:nth-child(4) { transition-delay: 180ms; }
+  [data-reveal].stagger.in > *:nth-child(5) { transition-delay: 240ms; }
+  [data-reveal].stagger.in > *:nth-child(6) { transition-delay: 300ms; }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] { opacity: 1; transform: none; }
+    [data-reveal].stagger > * { opacity: 1; transform: none; transition: none; }
+  }
 
   /* ---- skill tiles ---- */
   .skill-tile {
@@ -353,7 +383,7 @@
         <span class="bar" style="background:var(--tone-pharma);"></span>
         <p>상담 노하우를 그대로 담아, AI와 함께 만든 상담 툴</p>
       </div>
-      <div data-reveal style="display:flex; flex-wrap:wrap; gap:44px 40px; align-items:flex-start; justify-content:center;">
+      <div class="stagger" data-reveal style="display:flex; flex-wrap:wrap; gap:44px 40px; align-items:flex-start; justify-content:center;">
         <!-- consult cards -->
         <div style="display:flex; flex-direction:column; gap:20px; width:340px;">
           <div class="chrome">
@@ -409,7 +439,7 @@
         <span class="bar"></span>
         <p>유학상품 기획부터 상담의 내용을 담은 CRM 등 랜딩 페이지</p>
       </div>
-      <div class="grid2" data-reveal>
+      <div class="grid2 stagger" data-reveal>
         <div class="work"><div class="thumb"><img src="assets/slots/landing-1.webp" alt="몰타 영상용 랜딩 페이지" loading="lazy"></div>
           <h3 style="color:var(--text-on-dark);">몰타 영상용 랜딩 페이지</h3>
           <a class="btn primary sm" style="width:fit-content;" href="https://jaebong-choi.github.io/maltamarketing/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
@@ -439,7 +469,7 @@
         <p>숏폼·롱폼 가리지 않고 제작 합니다.<br>최근엔 AI를 이용하여 제작 속도를 끌어올리고 있습니다.</p>
       </div>
 
-      <div data-reveal style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:44px 40px; justify-content:center; margin-bottom:72px;">
+      <div class="stagger" data-reveal style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:44px 40px; justify-content:center; margin-bottom:72px;">
         <div class="work" style="width:300px;"><div class="thumb" style="width:300px; height:auto; aspect-ratio:9 / 16;"><img src="assets/slots/sns-3.webp" alt="edm유학센터 어학연수 홍보 숏폼" loading="lazy" style="object-position:50% 30%;"></div>
           <h3 style="color:var(--text-on-light);">edm유학센터<br>30+ 과정 홍보 쇼츠</h3>
           <a class="btn fintech sm" style="width:fit-content;" href="https://www.youtube.com/shorts/yJL-hQpJZ3w" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
@@ -449,7 +479,7 @@
       </div>
 
       <div class="sub-divider" data-reveal><span class="t" style="color:var(--text-on-light);">숏폼</span><span class="d" style="color:var(--text-muted-on-light);">최근 제작한 숏폼 콘텐츠</span><span class="line"></span></div>
-      <div class="grid2" data-reveal style="margin-bottom:72px;">
+      <div class="grid2 stagger" data-reveal style="margin-bottom:72px;">
         <div class="work"><div class="thumb"><img src="assets/slots/sns-1.webp" alt="몰타 어학연수 홍보 영상" loading="lazy"></div>
           <h3 style="color:var(--text-on-light);">몰타 어학연수 홍보 영상</h3>
           <a class="btn fintech sm" style="width:fit-content;" href="https://youtube.com/shorts/gv0BVKMfSv4" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
@@ -459,7 +489,7 @@
       </div>
 
       <div class="sub-divider" data-reveal><span class="t" style="color:var(--text-on-light);">롱폼</span><span class="d" style="color:var(--text-muted-on-light);">최근 제작한 롱폼 콘텐츠</span><span class="line"></span></div>
-      <div class="grid2" data-reveal>
+      <div class="grid2 stagger" data-reveal>
         <div class="work"><div class="thumb"><img src="assets/slots/sns-long-1.webp" alt="필리핀 안내 롱폼 편집" loading="lazy"></div>
           <h3 style="color:var(--text-on-light);">필리핀 안내 롱폼 편집</h3>
           <a class="btn fintech sm" style="width:fit-content;" href="https://www.youtube.com/watch?v=VtpWzUSzj0I" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a></div>
@@ -482,7 +512,7 @@
         <span class="bar" style="background:var(--tone-edtech);"></span>
         <p>기획 · 카피 · 디자인을 자동화해 뽑아낸 카드 뉴스 제작</p>
       </div>
-      <div class="carousel-row" data-reveal>
+      <div class="carousel-row stagger" data-reveal>
         <button class="iconbtn" id="cn-left" aria-label="이전">‹</button>
         <div class="carousel" id="cardnews-track">
           <div class="card"><div class="thumb"><img src="assets/slots/cardnews-1.webp" alt="환율 상승에 대한 어학연수 추천 카드뉴스" loading="lazy"></div>
@@ -510,7 +540,7 @@
         <h2>그 외 작업</h2>
         <span class="bar"></span>
       </div>
-      <div class="grid2" data-reveal>
+      <div class="grid2 stagger" data-reveal>
         <div class="work"><div class="thumb"><img src="assets/slots/etc-1.webp" alt="Notion 오리엔테이션 자료" loading="lazy"></div>
           <h3 style="color:var(--text-on-dark);">Notion 오리엔테이션 자료</h3>
           <p style="margin:0; font-family:var(--font-mono); font-size:var(--text-body); line-height:var(--leading-body); color:var(--text-muted-on-dark);">내가 그냥 있으면 좋을 것 같아 만든 출국 OT자료</p>
@@ -535,7 +565,7 @@
         <span class="bar"></span>
         <p>17년, 유학 상담 현장에서 쌓은 감각을 AI 콘텐츠 제작 스피드에 더하고 있어요.</p>
       </div>
-      <div class="about-cols" data-reveal style="display:flex; gap:80px; align-items:center; flex-wrap:wrap; justify-content:center;">
+      <div class="about-cols stagger" data-reveal style="display:flex; gap:80px; align-items:center; flex-wrap:wrap; justify-content:center;">
         <div style="display:flex; flex-direction:column; gap:32px; max-width:380px;">
           <div style="display:flex; flex-direction:column; gap:6px;">
             <span style="font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:56px; line-height:1.05; letter-spacing:-0.02em; color:var(--text-on-light);">SINCE <span style="color:var(--accent);">2009</span></span>
@@ -611,7 +641,7 @@
         <span class="bar"></span>
         <p>현장에서 검증된 역량, 팀과 지키는 원칙</p>
       </div>
-      <div class="strength-grid" data-reveal>
+      <div class="strength-grid stagger" data-reveal>
         <div class="strength"><span class="tag">COUNSELING &amp; SALES</span><span class="t">유학 상담 · 세일즈</span><span class="d">17년간 상담부터 계약 · 수속까지 전 과정을 직접 담당</span></div>
         <div class="strength"><span class="tag">GLOBAL EXPERIENCE</span><span class="t">국가별 현지 경험</span><span class="d">영국 · 몰타 · 미국 · 캐나다 · 호주 등 직접 경험한 현지 눈높이 상담</span></div>
         <div class="strength"><span class="tag">AI CONTENT</span><span class="t">AI 콘텐츠 제작</span><span class="d">랜딩페이지 · 영상 · 카드뉴스 · AI 상담 툴 직접 제작</span></div>
