@@ -259,6 +259,16 @@
     .chrome.hub .view iframe { transform: scale(0.266); }
   }
 
+  /* ---- 허브에 묶이는 개별 툴 (미리보기 없이 링크 타일로) ---- */
+  .toolrow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 970px; margin: 0 auto; }
+  .toolrow a { display: flex; flex-direction: column; gap: 8px; padding: 20px; border-radius: var(--radius-card); background: var(--surface-page); box-shadow: inset 0 0 0 1px var(--border-field); text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .toolrow a:hover { transform: translateY(-2px); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tone-pharma) 50%, transparent), 0 12px 26px rgba(0,0,0,0.08); }
+  .toolrow .tag { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--tone-pharma); }
+  .toolrow .t { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: 16px; line-height: 1.35; color: var(--text-on-light); }
+  .toolrow .u { margin-top: auto; padding-top: 12px; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted-on-light); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  @media (max-width: 1000px) { .toolrow { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .toolrow { grid-template-columns: 1fr; } }
+
   /* ---- carousel ---- */
   .carousel-row { display: flex; align-items: center; gap: 20px; }
   .carousel { display: flex; flex: 1 1 auto; min-width: 0; gap: 24px; overflow-x: auto; scroll-behavior: smooth; padding: 4px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
@@ -436,7 +446,7 @@
       </div>
 
       <!-- 통합 허브 (featured) -->
-      <div data-reveal style="display:flex; flex-direction:column; align-items:center; gap:20px; margin:0 auto 64px;">
+      <div data-reveal style="display:flex; flex-direction:column; align-items:center; gap:20px; margin:0 auto 44px;">
         <div class="chrome hub" style="max-width:100%;">
           <div class="bar"><div class="lights"><i style="background:#ff5f57;"></i><i style="background:#febc2e;"></i><i style="background:#28c840;"></i></div><div class="tab"><span class="fav"></span><span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Study Guide Hub</span></div></div>
           <div class="tool"><div class="url"><span class="lock"></span><span>jaebong-choi.github.io/study-guide-hub</span></div></div>
@@ -450,59 +460,27 @@
         <a class="btn pharma md" style="width:fit-content;" href="https://jaebong-choi.github.io/study-guide-hub/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a>
       </div>
 
-      <div class="stagger" data-reveal style="display:flex; flex-wrap:wrap; gap:44px 40px; align-items:flex-start; justify-content:center; max-width:724px; margin:0 auto;">
-        <!-- consult cards -->
-        <div style="display:flex; flex-direction:column; gap:20px; width:340px;">
-          <div class="chrome">
-            <div class="bar"><div class="lights"><i style="background:#ff5f57;"></i><i style="background:#febc2e;"></i><i style="background:#28c840;"></i></div><div class="tab"><span class="fav"></span><span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">UK University AI</span></div></div>
-            <div class="tool"><div class="url"><span class="lock"></span><span>jaebong-choi.github.io/uk-study-guide</span></div></div>
-            <div class="view"><iframe src="https://jaebong-choi.github.io/uk-study-guide/" title="영국 대학진학 AI 컨설팅" scrolling="no" loading="lazy"></iframe></div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:6px;">
-            <span class="eyebrow" style="color:var(--tone-pharma);">UK UNIVERSITY</span>
-            <h3 style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:19px; line-height:1.3; color:var(--text-on-light);">영국 대학진학 AI 컨설팅</h3>
-          </div>
-          <a class="btn pharma sm" style="width:fit-content;" href="https://jaebong-choi.github.io/uk-study-guide/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a>
-        </div>
-
-        <div style="display:flex; flex-direction:column; gap:20px; width:340px;">
-          <div class="chrome">
-            <div class="bar"><div class="lights"><i style="background:#ff5f57;"></i><i style="background:#febc2e;"></i><i style="background:#28c840;"></i></div><div class="tab"><span class="fav"></span><span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">AU University AI</span></div></div>
-            <div class="tool"><div class="url"><span class="lock"></span><span>jaebong-choi.github.io/au-study-guide</span></div></div>
-            <div class="view"><iframe src="https://jaebong-choi.github.io/au-study-guide/" title="호주 대학진학 AI 컨설팅" scrolling="no" loading="lazy"></iframe></div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:6px;">
-            <span class="eyebrow" style="color:var(--tone-pharma);">AU UNIVERSITY</span>
-            <h3 style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:19px; line-height:1.3; color:var(--text-on-light);">호주 대학진학 AI 컨설팅</h3>
-          </div>
-          <a class="btn pharma sm" style="width:fit-content;" href="https://jaebong-choi.github.io/au-study-guide/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a>
-        </div>
-
-        <div style="display:flex; flex-direction:column; gap:20px; width:340px;">
-          <div class="chrome">
-            <div class="bar"><div class="lights"><i style="background:#ff5f57;"></i><i style="background:#febc2e;"></i><i style="background:#28c840;"></i></div><div class="tab"><span class="fav"></span><span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">CA College AI</span></div></div>
-            <div class="tool"><div class="url"><span class="lock"></span><span>jaebong-choi.github.io/ca-study-guide</span></div></div>
-            <div class="view"><iframe src="https://jaebong-choi.github.io/ca-study-guide/" title="캐나다 공립 컬리지 진학 AI 컨설팅" scrolling="no" loading="lazy"></iframe></div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:6px;">
-            <span class="eyebrow" style="color:var(--tone-pharma);">CA COLLEGE</span>
-            <h3 style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:19px; line-height:1.3; color:var(--text-on-light);">캐나다 컬리지 진학 AI 컨설팅</h3>
-          </div>
-          <a class="btn pharma sm" style="width:fit-content;" href="https://jaebong-choi.github.io/ca-study-guide/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a>
-        </div>
-
-        <div style="display:flex; flex-direction:column; gap:20px; width:340px;">
-          <div class="chrome">
-            <div class="bar"><div class="lights"><i style="background:#ff5f57;"></i><i style="background:#febc2e;"></i><i style="background:#28c840;"></i></div><div class="tab"><span class="fav"></span><span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">ESL School Map</span></div></div>
-            <div class="tool"><div class="url"><span class="lock"></span><span>jaebong-choi.github.io/esl-study-map</span></div></div>
-            <div class="view"><iframe src="https://jaebong-choi.github.io/esl-study-map/" title="6개국 어학연수 학교 지도" scrolling="no" loading="lazy"></iframe></div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:6px;">
-            <span class="eyebrow" style="color:var(--tone-pharma);">ESL MAP</span>
-            <h3 style="margin:0; font-family:var(--font-display); font-weight:var(--weight-extrabold); font-size:19px; line-height:1.3; color:var(--text-on-light);">6개국 어학연수 학교 지도</h3>
-          </div>
-          <a class="btn pharma sm" style="width:fit-content;" href="https://jaebong-choi.github.io/esl-study-map/" target="_blank" rel="noopener">바로가기 <span class="chev">→</span></a>
-        </div>
+      <div class="toolrow stagger" data-reveal>
+        <a href="https://jaebong-choi.github.io/uk-study-guide/" target="_blank" rel="noopener">
+          <span class="tag">UK UNIVERSITY</span>
+          <span class="t">영국 대학진학<br>AI 컨설팅</span>
+          <span class="u">uk-study-guide →</span>
+        </a>
+        <a href="https://jaebong-choi.github.io/au-study-guide/" target="_blank" rel="noopener">
+          <span class="tag">AU UNIVERSITY</span>
+          <span class="t">호주 대학진학<br>AI 컨설팅</span>
+          <span class="u">au-study-guide →</span>
+        </a>
+        <a href="https://jaebong-choi.github.io/ca-study-guide/" target="_blank" rel="noopener">
+          <span class="tag">CA COLLEGE</span>
+          <span class="t">캐나다 컬리지 진학<br>AI 컨설팅</span>
+          <span class="u">ca-study-guide →</span>
+        </a>
+        <a href="https://jaebong-choi.github.io/esl-study-map/" target="_blank" rel="noopener">
+          <span class="tag">ESL MAP</span>
+          <span class="t">6개국 어학연수<br>학교 지도</span>
+          <span class="u">esl-study-map →</span>
+        </a>
       </div>
     </div>
   </section>
