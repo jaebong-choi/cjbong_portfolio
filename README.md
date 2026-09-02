@@ -7,7 +7,9 @@ Claude Design에서 만든 프로토타입(`Portfolio.dc.html`)을 자체 완결
 
 ## 구성
 
-- `index.html` — 사이트 전체 (HTML/CSS/JS 단일 파일, 빌드 불필요)
+- `index.html` — 기본 채널 (HTML/CSS/JS 단일 파일, 빌드 불필요)
+- `general/index.html` — 범용 이력서용 채널 (`/general/`)
+- `kiwoom/index.html` — 키움태양광 지원용 채널 (`/kiwoom/`, 영상 제작·편집 중심)
 - `assets/` — 프로필/로고 이미지, 작업 썸네일(`assets/slots/`)
 
 정적 사이트라 별도 빌드 과정이 없습니다. 어떤 정적 호스팅(Vercel, Netlify, GitHub Pages)에도 그대로 올라갑니다.
